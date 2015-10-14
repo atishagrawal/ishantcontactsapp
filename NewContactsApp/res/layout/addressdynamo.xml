@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/addressdynamo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <EditText
+        android:id="@+id/edaddressdynamic"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:inputType="text" />
+
+    <Spinner
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/Email" />
+
+    <Button
+        android:id="@+id/bremoveaddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/ic_wrong"
+        android:onClick="removeaddress"/>
+
+</LinearLayout>

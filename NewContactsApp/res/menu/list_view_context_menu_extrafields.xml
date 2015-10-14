@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_view_phoneticname"
+        android:orderInCategory="1"
+        android:title="Phonetic name"/>
+    <item
+        android:id="@+id/action_view_IM"
+        android:orderInCategory="2"
+        android:title="IM"/>
+    <item
+        android:id="@+id/action_view_Website"
+        android:orderInCategory="3"
+        android:title="Website"/>
+    <item
+        android:id="@+id/action_view_Nickname"
+        android:orderInCategory="4"
+        android:title="Nickname"/>
+    <item
+        android:id="@+id/action_view_Notes"
+        android:orderInCategory="5"
+        android:title="Notes"/>
+    <item
+        android:id="@+id/action_view_SIP"
+        android:orderInCategory="6"
+        android:title="SIP"/>
+
+</menu>

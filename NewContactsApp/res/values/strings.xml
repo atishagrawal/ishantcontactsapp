@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">foooooo</string>
+    <string name="title_action_bar_add_new_contact">Add new contact</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+ <string-array name="Email">
+        <item>Mobile</item>
+        <item>Home</item>
+        <item>Work</item>
+        <item>Work Fax</item>
+        <item>Home Fax</item>
+        <item>Pager</item>
+        <item>other</item>
+        <item>Custom</item>
+        <item>Callback</item>
+        <item>CAR</item>
+        <item>COMPANY MAIN</item>
+        <item>ISDN</item>
+        <item>MAIN</item>
+        <item>OTHER FAX</item>
+        <item>TELEX</item>
+        <item>TTY/TDD</item>
+        <item>WORK MOBILE</item>
+        <item>WORK PAGER</item>
+        <item>ASSITANT</item>
+        <item>MMS</item>
+    </string-array>
+    
+</resources>

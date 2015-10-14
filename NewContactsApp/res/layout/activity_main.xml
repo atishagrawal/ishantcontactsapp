@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone-only,unsynced contact" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/edtxtNamePrefix"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:hint="Name Prefix"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edtxtNamemain"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:hint="Name"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/bicon_down_arrow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:onClick="showmethod" />
+
+            <Button
+                android:id="@+id/bicon_up_arrow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ic_keyboard_arrow_up_black_24dp"
+                android:onClick="hidemethod"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edtxtfirstname"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/edtxtmiddlename"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Middle Name"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/edtxtlastname"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Last Name"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/edtxtnamesuffix"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Name Suffix"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/edtxtPhoneticname"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Phonetic Name"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/bAddOrg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:textColor="#808080"
+            android:onClick="changemethod"
+            android:text="Add Organisation"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/edcompany"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Company"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/edtitle"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="13dp"
+            android:background="#808080"
+            android:paddingBottom="30dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/edphone"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="Phone"
+                android:inputType="phone" />
+
+            <Spinner
+                android:id="@+id/spinnerMobile"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                 />
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:id="@+id/bremovephone_prime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_wrong"
+                android:onClick="removephone"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayoutphone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/baddnewphone"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:onClick="updatemethodphone"
+            android:text="Add new"
+            android:textColor="#808080"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="13dp"
+            android:background="#808080"
+            android:paddingBottom="30dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/edemail"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+
+            <Spinner
+                android:id="@+id/spinnerEmail"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/Email" />
+
+            <Button
+                android:id="@+id/bremoveemail_prime"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_wrong"
+                android:onClick="removeemail"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayoutemail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/baddnewemail"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+android:textColor="#808080"
+            android:onClick="updatemethodemail"
+            android:text="Add new"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvIM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IM"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/viewIM"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="13dp"
+            android:background="#000000"
+            android:paddingBottom="30dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/linlayoutIM"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/edIM"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="IM"
+                android:inputType="text" />
+
+            <Spinner
+                android:id="@+id/spinnerIM"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:entries="@array/Email" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="13dp"
+            android:background="#808080"
+            android:paddingBottom="30dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/edaddress"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="Address"
+                android:inputType="text" />
+
+            <Spinner
+                android:id="@+id/spinnerAddress"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/Email" />
+
+            <Button
+                android:id="@+id/bremoveaddress_prime"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_wrong"
+                android:onClick="removeaddress"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayoutaddress"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/baddnewaddress"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:onClick="updatemethodaddress"
+           android:textColor="#808080"
+            android:text="Add new"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvnotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notes"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/viewnotes"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="13dp"
+            android:background="#000000"
+            android:paddingBottom="30dp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/edNotes"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Notes"
+            android:inputType="text"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvnickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nickname"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/viewnicname"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="13dp"
+            android:background="#000000"
+            android:paddingBottom="30dp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/edNickname"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Nickname"
+            android:inputType="text"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvwebsite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Website"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/viewwebsite"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="13dp"
+            android:background="#000000"
+            android:paddingBottom="30dp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/edwebsite"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Website"
+            android:inputType="text"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvSIP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIP"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/viewSIP"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="13dp"
+            android:background="#000000"
+            android:paddingBottom="30dp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/edSIP"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="SIP"
+            android:inputType="text"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/badd_fields"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:onClick="addAnother"
+            android:text="Add Another Field" />
+    </LinearLayout>
+
+</ScrollView>
